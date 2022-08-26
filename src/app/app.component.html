@@ -1,0 +1,12 @@
+<app-header [clickBurger]="drawer"></app-header>
+
+<mat-drawer-container class="background h-full" [hasBackdrop]="true" autosize>
+  <mat-drawer #drawer class="w-320 navColor" mode="side">
+    <app-nav-bar></app-nav-bar>
+  </mat-drawer>
+
+  <div class="main_content">
+    <!-- Routing -->
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

@@ -1,0 +1,16 @@
+.navColor{
+  background-color: #5383b0c4;
+}
+
+::ng-deep .mat-nav-list .mat-list-item:hover{
+  background-color: #8ABEEB;
+}
+
+::ng-deep .mat-nav-list .mat-list-item:focus{
+  background-color: #8ABEEB;
+}
+
+.active-link{
+  background-color: #8ABEEB;
+}
+
