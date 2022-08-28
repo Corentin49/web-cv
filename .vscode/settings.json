@@ -21,5 +21,15 @@
   "editor.formatOnSaveMode": "file", // required to format on save
   "files.autoSave": "onFocusChange", // optional but recommended
   "eslint.alwaysShowStatus": true,
-  "eslint.enable": true
+  "eslint.enable": true,
+  "eslint.options": {
+    "extensions": [".ts", ".html"]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ],
 }

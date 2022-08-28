@@ -6,16 +6,14 @@ import { MatSidenav } from '@angular/material/sidenav';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent  {
 
   @Input()
   public clickBurger!: any;
 
+
   constructor() { }
 
-  ngOnInit(): void {
-
-  }
 
 
 

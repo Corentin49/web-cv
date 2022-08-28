@@ -14,3 +14,8 @@
   background-color: #8ABEEB;
 }
 
+/* Chrome */
+.mat-list-option:not(.mat-list-single-selected-option):not(.mat-list-item-disabled):hover, .mat-nav-list .mat-list-item:not(.mat-list-item-disabled):hover, .mat-action-list .mat-list-item:not(.mat-list-item-disabled):hover{
+  background-color: #8ABEEB;
+}
+
