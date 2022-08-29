@@ -5,3 +5,107 @@
 mat-toolbar {
   background-color: #5383b0c4;
 }
+
+.title-opacity {
+  opacity: 1;
+  animation: opacity 3s;
+}
+
+.title-animation {
+  border-right: inherit;
+  position: absolute;
+  z-index: 1000;
+  height: 56px;
+  background-color: #416c93;
+  animation: borderCreation 500ms linear, slidein 3s 500ms linear, borderDismiss 500ms 3500ms linear;
+}
+
+@keyframes slidein {
+  from {
+    width: calc(100% - 56px);
+    border-right: 4px solid white;
+  }
+  to {
+    border-right: 4px solid white;
+    width: 0;
+  }
+}
+
+@keyframes slideinLarge {
+  from {
+    width: calc(25% - 56px);
+    border-right: 4px solid white;
+  }
+  to {
+    border-right: 4px solid white;
+    width: 0;
+  }
+}
+
+@keyframes borderCreation {
+  from {
+    width: calc(100% - 56px);
+    border-right: 4px solid white;
+    margin-top: 28px;
+    height: 0px;
+  }
+  to {
+    width: calc(100% - 56px);
+    border-right: 4px solid white;
+    height: 56px;
+    margin-top: 0px;
+  }
+}
+
+@keyframes borderDismiss {
+  from {
+    width: calc(100% - 56px);
+    border-left: 4px solid white;
+    height: 56px;
+    margin-top: 0px;
+  }
+  to {
+    width: calc(100% - 56px);
+    border-left: 4px solid white;
+    height: 0px;
+    margin-top: 28px;
+  }
+}
+
+@keyframes borderCreationLarge {
+  from {
+    width: calc(25% - 56px);
+    border-right: 4px solid white;
+    margin-top: 28px;
+    height: 0px;
+  }
+  to {
+    width: calc(25% - 56px);
+    border-right: 4px solid white;
+    height: 64px;
+    margin-top: 0px;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h2 {
+  font-size: medium;
+}
+
+@media screen and (min-width: 600px) {
+  .title-animation {
+    height: 64px;
+    animation: borderCreationLarge 500ms linear, slideinLarge 4s 500ms 1;
+  }
+}
