@@ -4,7 +4,17 @@ const plugin = require('tailwindcss/plugin');
 module.exports = {
   content: ['./src/**/*.{html,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        main: 'var(--main)',
+        background: 'var(--background)',
+        header: 'var(--header)',
+        accent: 'var(--accent)',
+        borderAnimation: 'var(--borderAnimation)',
+      },
+    },
   },
   plugins: [
     plugin(function ({addBase, theme}) {

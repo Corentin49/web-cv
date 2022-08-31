@@ -1,21 +1,22 @@
-.navColor{
-  background-color: #5383b0c4;
+.navColor {
+  background-color: var(--primary);
 }
 
-::ng-deep .mat-nav-list .mat-list-item:hover{
-  background-color: #8ABEEB;
+::ng-deep .mat-nav-list .mat-list-item:hover {
+  background-color: var(--accent);
 }
 
-::ng-deep .mat-nav-list .mat-list-item:focus{
-  background-color: #8ABEEB;
+::ng-deep .mat-nav-list .mat-list-item:focus {
+  background-color: var(--accent);
 }
 
-.active-link{
-  background-color: #8ABEEB;
+.active-link {
+  background-color: var(--accent);
 }
 
 /* Chrome */
-.mat-list-option:not(.mat-list-single-selected-option):not(.mat-list-item-disabled):hover, .mat-nav-list .mat-list-item:not(.mat-list-item-disabled):hover, .mat-action-list .mat-list-item:not(.mat-list-item-disabled):hover{
-  background-color: #8ABEEB;
+.mat-list-option:not(.mat-list-single-selected-option):not(.mat-list-item-disabled):hover,
+.mat-nav-list .mat-list-item:not(.mat-list-item-disabled):hover,
+.mat-action-list .mat-list-item:not(.mat-list-item-disabled):hover {
+  background-color: var(--accent);
 }
-

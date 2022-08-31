@@ -3,7 +3,7 @@
 }
 
 mat-toolbar {
-  background-color: #5383b0c4;
+  background-color: var(--primary);
 }
 
 .title-opacity {
@@ -16,17 +16,17 @@ mat-toolbar {
   position: absolute;
   z-index: 1000;
   height: 56px;
-  background-color: #416c93;
+  background-color: #5383b0;
   animation: borderCreation 500ms linear, slidein 3s 500ms linear, borderDismiss 500ms 3500ms linear;
 }
 
 @keyframes slidein {
   from {
     width: calc(100% - 56px);
-    border-right: 4px solid white;
+    border-right: 4px solid var(--borderAnimation);
   }
   to {
-    border-right: 4px solid white;
+    border-right: 4px solid var(--borderAnimation);
     width: 0;
   }
 }
@@ -34,10 +34,10 @@ mat-toolbar {
 @keyframes slideinLarge {
   from {
     width: calc(25% - 56px);
-    border-right: 4px solid white;
+    border-right: 4px solid var(--borderAnimation);
   }
   to {
-    border-right: 4px solid white;
+    border-right: 4px solid var(--borderAnimation);
     width: 0;
   }
 }
@@ -45,13 +45,13 @@ mat-toolbar {
 @keyframes borderCreation {
   from {
     width: calc(100% - 56px);
-    border-right: 4px solid white;
+    border-right: 4px solid var(--borderAnimation);
     margin-top: 28px;
     height: 0px;
   }
   to {
     width: calc(100% - 56px);
-    border-right: 4px solid white;
+    border-right: 4px solid var(--borderAnimation);
     height: 56px;
     margin-top: 0px;
   }
@@ -60,28 +60,47 @@ mat-toolbar {
 @keyframes borderDismiss {
   from {
     width: calc(100% - 56px);
-    border-left: 4px solid white;
+    border-left: 4px solid var(--borderAnimation);
     height: 56px;
     margin-top: 0px;
+    background-color: #416b9300;
   }
   to {
     width: calc(100% - 56px);
-    border-left: 4px solid white;
+    border-left: 4px solid var(--borderAnimation);
     height: 0px;
     margin-top: 28px;
+    background-color: #416b9300;
+  }
+}
+
+@keyframes borderDismissLarge {
+  from {
+    width: calc(25% - 64px);
+    border-left: 4px solid var(--borderAnimation);
+    height: 56px;
+    margin-top: 0px;
+    background-color: #416b9300;
+  }
+  to {
+    width: calc(25% - 64px);
+    border-left: 4px solid var(--borderAnimation);
+    height: 0px;
+    margin-top: 28px;
+    background-color: #416b9300;
   }
 }
 
 @keyframes borderCreationLarge {
   from {
     width: calc(25% - 56px);
-    border-right: 4px solid white;
+    border-right: 4px solid var(--borderAnimation);
     margin-top: 28px;
     height: 0px;
   }
   to {
     width: calc(25% - 56px);
-    border-right: 4px solid white;
+    border-right: 4px solid var(--borderAnimation);
     height: 64px;
     margin-top: 0px;
   }
@@ -91,7 +110,7 @@ mat-toolbar {
   0% {
     opacity: 0;
   }
-  50% {
+  40% {
     opacity: 0;
   }
   100% {
@@ -100,12 +119,14 @@ mat-toolbar {
 }
 
 h2 {
+  line-height: normal;
   font-size: medium;
 }
 
 @media screen and (min-width: 600px) {
   .title-animation {
     height: 64px;
-    animation: borderCreationLarge 500ms linear, slideinLarge 4s 500ms 1;
+    animation: borderCreationLarge 500ms linear, slideinLarge 4s 500ms 1,
+      borderDismissLarge 500ms 4500ms 1;
   }
 }
